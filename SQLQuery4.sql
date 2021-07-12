@@ -30,7 +30,7 @@ inner join countries c on c.country_name='United States of America';
 select * from employees where year(hire_date)='1994';
 
 -- query 3
--- retrun first name and last name and email and phone for each emloyee in job Programmer
+-- retrun first name and last name and email and phone for each employee in job Programmer
 select e.first_name,e.last_name,e.email,e.phone_number from jobs j 
 inner join employees e on e.job_id=j.job_id 
 where j.job_title='Programmer'
@@ -60,7 +60,7 @@ group by c.country_name;
 
 
 --query 7
--- return number of employee and total salay  for each job 
+-- return number of employee and total salary  for each job 
 select j.job_title,count(e.job_id) as "Number of Employee",sum(e.salary) as "Total of Salary" from jobs j 
 inner join employees e on e.job_id=j.job_id 
 group by j.job_title
